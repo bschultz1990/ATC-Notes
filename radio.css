@@ -1,0 +1,26 @@
+html {
+  font-size: 0.8rem;
+}
+
+.custom-span {
+  width: 9rem;
+  height: 2rem;
+  display: inline-block;
+  color: #999999;
+  font-size: 85%;
+  border: 1px solid #999999;
+  padding: 0.5rem;
+}
+
+
+section {
+  margin-bottom: 2rem;
+}
+
+@media print {
+
+  #prelim-info,
+  #title {
+    display: none;
+  }
+}
