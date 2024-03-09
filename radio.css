@@ -1,5 +1,5 @@
 html {
-  font-size: 0.8rem;
+  font-size: 0.9rem;
 }
 
 .custom-span {
@@ -12,6 +12,9 @@ html {
   padding: 0.5rem;
 }
 
+.card {
+  border: 1px solid #999999;
+}
 
 section {
   margin-bottom: 2rem;
@@ -19,8 +22,7 @@ section {
 
 @media print {
 
-  #prelim-info,
-  #title {
+  #prelim-info {
     display: none;
   }
 }

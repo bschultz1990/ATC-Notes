@@ -12,60 +12,78 @@
 
 <body>
   <div class="container">
-    <h1 id="title">ATC Radio Scratchpad</h1>
+    <section>
+      <h1 id="title">ATC Radio Scratchpad</h1>
+    </section>
     <section id="prelim-info">
       <form>
         <div class="form-group d-flex justify-content-between">
           <label for="dep-loc"><b>Departure Location:</b></label>
-          <input type="text" class="form-control w-25" id="dep-loc" name="dep-loc" placeholder="LA">
+          <input type="text" class="form-control w-25" id="form-dep-loc" name="dep-loc">
         </div>
         <div class="form-group d-flex justify-content-between">
           <label for="callsign"><b>Callsign:</b></label>
-          <input type="text" class="form-control w-25" id="callsign" name="callsign" placeholder="JBU1234">
+          <input type="text" class="form-control w-25" id="form-callsign" name="callsign">
         </div>
         <div class="form-group d-flex justify-content-between">
           <label for="ac-type"><b>Aircraft Type Code:</b></label>
-          <input type="text" class="form-control w-25" id="ac-type" name="ac-type" placeholder="A20N">
+          <input type="text" class="form-control w-25" id="form-ac-type" name="ac-type">
         </div>
         <div class="form-group d-flex justify-content-between">
           <label for="dep-gate"><b>Departure Gate # :</b></label>
-          <input type="text" class="form-control w-25" id="dep-gate" name="dep-gate" placeholder="10">
+          <input type="text" class="form-control w-25" id="form-dep-gate" name="dep-gate">
         </div>
         <div class="form-group d-flex justify-content-between">
-          <label for="dep-atis"><b>Departure ATIS :</b></label>
-          <input type="text" class="form-control w-25" id="dep-atis" name="dep-atis" placeholder="A">
+          <label for="dep-atis"><b>Departure ATIS:</b></label>
+          <input type="text" class="form-control w-25" id="form-dep-atis" name="dep-atis">
         </div>
         <div class="form-group d-flex justify-content-between">
-          <label for="dep-name"><b>Departure name :</b></label>
-          <input type="text" class="form-control w-25" id="dep-name" name="dep-name" placeholder="LADYJ4">
+          <label for="dep-name"><b>Departure name:</b></label>
+          <input type="text" class="form-control w-25" id="form-dep-name" name="dep-name">
         </div>
         <div class="form-group d-flex justify-content-between">
-          <label for="dep-name"><b>Destination name :</b></label>
-          <input type="text" class="form-control w-25" id="dest-name" name="dest-name" placeholder="KSEA">
+          <label for="dest-name"><b>Arrival location:</b></label>
+          <input type="text" class="form-control w-25" id="form-arr-loc" name="dest-name">
         </div>
+        <div class="form-group d-flex justify-content-between">
+          <label for="form-arr-rwy"><b>Arrival runway:</b></label>
+          <input type="text" class="form-control w-25" id="form-arr-rwy" name="arr-rwy">
+        </div>
+        <div class="form-group d-flex justify-content-between">
+          <label for="form-arr-dst"><b>Arrival runway:</b></label>
+          <input type="text" class="form-control w-25" id="form-arr-dst" name="arr-dst">
+        </div>
+        <button id="update">Update</button>
       </form>
     </section>
     <section>
       <div class="card">
-        <div class="card-header bg-light">
-          <h5>IFR Clearance</h5>
+        <div class="card-header">
+          <h5 class="text-primary">IFR Clearance</h5>
         </div>
         <div class="card-body">
           <p class="card-text">
-            <span class="dep-loc custom-span">dep. location</span> ground,
+            <!-- <span class="dep-loc custom-span">dep. location</span> ground,
             <span class="callsign custom-span">callsign</span> is
             <span class="ac-type custom-span">ac type</span> at
             <span class="dep-gate custom-span">dep. gate</span> with information
             <span class="dep-atis custom-span">ATIS</span>.
-            Requesting IFR clearance to <span class="arr-loc custom-span">arr. loc.</span>
+            Requesting IFR clearance to <span class="arr-loc custom-span">arr. loc.</span> -->
+
+            <span><input type="text" class="dep-loc" placeholder="dep. location"></span> ground,
+            <span><input type="text" class="callsign" placeholder="callsign"></span> is
+            <span><input type="text" class="ac-type" placeholder="ac type"></span> at
+            <span><input type="text" class="dep-gate" placeholder="dep. gate"></span> with information
+            <span><input type="text" class="dep-atis" placeholder="ATIS"></span>.
+            Requesting IFR clearance to <span><input type="text" class="arr-loc" placeholder="arr. loc."></span>
           </p>
         </div>
       </div>
     </section>
     <section>
       <div class="card">
-        <div class="card-header bg-light">
-          <h5>Pushback</h5>
+        <div class="card-header">
+          <h5 class="text-primary">Pushback</h5>
         </div>
         <div class="card-body">
           <p class="card-text">
@@ -80,8 +98,8 @@
     </section>
     <section>
       <div class="card">
-        <div class="card-header bg-light">
-          <h5>Taxi Request</h5>
+        <div class="card-header">
+          <h5 class="text-primary">Taxi Request</h5>
         </div>
         <div class="card-body">
           <p class="card-text">
@@ -94,8 +112,8 @@
     </section>
     <section>
       <div class="card">
-        <div class="card-header bg-light">
-          <h5>Departure</h5>
+        <div class="card-header">
+          <h5 class="text-primary">Departure</h5>
         </div>
         <div class="card-body">
           <p class="card-text">
@@ -109,14 +127,13 @@
     </section>
     <section>
       <div class="card">
-        <div class="card-header bg-light">
-          <h5>Center</h5>
+        <div class="card-header">
+          <h5 class="text-primary">Center (Initial Call)</h5>
         </div>
         <div class="card-body">
           <p class="card-text">
             <span class="dep-loc custom-span">dep. location</span> center,
             <span class="callsign custom-span">callsign</span> is passing / at
-            <span class="dep-name custom-span">dep. name</span> departure, passing
             <span class="altitude custom-span">altitude</span> feet.
           </p>
         </div>
@@ -124,8 +141,8 @@
     </section>
     <section>
       <div class="card">
-        <div class="card-header bg-light">
-          <h5>Final Approach</h5>
+        <div class="card-header">
+          <h5 class="text-primary">Final Approach</h5>
         </div>
         <div class="card-body">
           <p class="card-text">
@@ -133,13 +150,14 @@
             <span class="callsign custom-span">callsign</span> has information
             <span class="dep-atis custom-span">ATIS</span>. On
             <span class="rwy-dst custom-span">dst. to rwy</span> mile final - runway
-            <span class="arr-runway custom-span">rwy. #</span>
+            <span class="arr-rwy custom-span">rwy. #</span>
           </p>
         </div>
       </div>
     </section>
   </div>
 
+  <script src="radio.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"></script>
