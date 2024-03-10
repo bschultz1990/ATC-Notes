@@ -2,22 +2,20 @@ html {
   font-size: 0.9rem;
 }
 
-.custom-span {
-  width: 9rem;
-  height: 2rem;
-  display: inline-block;
-  color: #999999;
-  font-size: 85%;
-  border: 1px solid #999999;
-  padding: 0.5rem;
-}
-
 .card {
   border: 1px solid #999999;
 }
 
+.card-header h5 {
+  font-weight: bold;
+}
+
 section {
   margin-bottom: 2rem;
+}
+
+.invisible {
+  display: none;
 }
 
 @media print {
