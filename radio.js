@@ -21,28 +21,26 @@ document.addEventListener("DOMContentLoaded", (e) => {
   let form_arr_dist = document.querySelector("#form-arr-dst");
 
   let update_btn = document.querySelector("#update");
-
   title.addEventListener('click', (e) => {
     e.preventDefault();
     prelim_info.classList.toggle('invisible');
-  })
 
-  function helper(src, dest) {
-    for (let i = 0; i < dest.length; i++) {
-      dest[i].value = src.value;
+    function helper(src, dest) {
+      for (let i = 0; i < dest.length; i++) {
+        dest[i].value = src.value;
+      }
     }
-  }
 
-  update_btn.addEventListener('click', (e) => {
-    e.preventDefault();
-    helper(form_dep_loc, dep_loc)
-    helper(form_callsign, callsign)
-    helper(form_ac_type, ac_type)
-    helper(form_dep_gate, dep_gate)
-    helper(form_dep_atis, dep_atis)
-    helper(form_arr_loc, arr_loc)
-    helper(form_arr_runway, arr_rwy)
-    helper(form_arr_dist, rwy_dst)
+    update_btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      helper(form_dep_loc, dep_loc)
+      helper(form_callsign, callsign)
+      helper(form_ac_type, ac_type)
+      helper(form_dep_gate, dep_gate)
+      helper(form_dep_atis, dep_atis)
+      helper(form_arr_loc, arr_loc)
+      helper(form_arr_runway, arr_rwy)
+      helper(form_arr_dist, rwy_dst)
+    })
   })
-
 })
